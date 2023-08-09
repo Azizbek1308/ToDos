@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{%block title%} All details {%endblock%}
+
+{%block content%}
+        <h1>{{el.name}} ({{el.salary}}$)</h1>
+        <h3>{{el.places}}</h3>
+        <h3>{{el.information}}</h3>
+        <h1><a href="{%url 'edit' el.pk %}">edit</a></h1>
+        <h1><a href="{%url 'delete' el.pk %}">delete</a></h1>
+
+{%endblock%}

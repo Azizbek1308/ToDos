@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+{%block title%} Edit Page {%endblock%}
+
+{%block content%}
+<form method="POST">{%csrf_token%}
+  {{form.as_p}}
+    <h3>are sure to delete....</h3>
+    <input type="submit" value="delete">
+</form>
+
+{%endblock%}

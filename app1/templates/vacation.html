@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{%block title%} Job Vacation {%endblock%}
+
+{%block content%}
+    {% for el in val %}
+        <h1><a href="{% url 'detail' el.pk%}">{{el.name}}</a>({{el.salary}}$)</h1>
+    {%endfor%}
+    <h1><a href="{%url 'create' %}">Create Vacations</a></h1>
+
+{%endblock%}
